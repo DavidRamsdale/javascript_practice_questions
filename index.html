@@ -1,0 +1,131 @@
+<html>
+
+    <script>
+// switch cases
+//        switch(fav_bird.toLowerCase()) {
+//     case "crow":
+// 		console.log("You like crows");
+// 		break;
+//     case "robin":
+// 		console.log("You like robins");
+// 		break;
+//     default: 
+// 		console.log("I dont know that bird");
+// }
+
+
+// While loop
+// let x =0;
+// while (x <3) {
+//     console.log(x);
+// 	x++;
+// }
+
+// Do while loop (This is used when you want to run the code at least once)
+// let input = blue;
+// do  {
+//    input = prompt("What is your favourite colour");
+// }
+
+// while (input !== "blue");
+
+// For loop
+
+// for ( let x = 0; x <= 10; x++) {
+//     console.log(x);
+// }
+
+// For of loop
+
+// For each
+// my_array.forEach((value, index) => console.log(value, index)
+
+
+// let cohort = {
+//     name: "Fast Track",
+//     students: 26,
+//     teacher: "Garret"
+// };
+
+// for (let key in cohort) {
+//         console.log(cohort[key]);
+// }
+
+
+// // For loop
+
+//  for ( let x = 9; x > 0; x--) {
+//     if x % 5 == 0
+//     console.log(x)
+//     break;
+//  }
+
+
+// Challenge 1
+
+// Make a terminal script that will create a journal with a short-term memory. Weird, I know.
+// Prompt a user for any content. What they did yesterday, what their favourite colour is, whatever. Store the user input in an array.
+// Print out all entries in the array.
+// Loop back and prompt the user for the next journal entry.
+// The journal can only contain a maximum of 5 entries, but can loop forever.
+
+// Challenge 2
+
+// Atomic Blonde Number:
+// a number is an atomic blonde number if the sum and product of its digits are equal.
+// For example, 123 is an atomic blonde number, as the sum of its digits (1+2+3) is 6, which is equal to the product of its digits (1*2*3).
+// Write a program to check if a number is an atomic blonde number or not. 
+
+let number = parseInt(prompt("What is your number"));
+let digits = number.toString().split("");
+let digit_nonstring = digits.map(Number);
+
+function getSum(a, b) {
+    return a + b;
+}
+
+function getMult(a, b) {
+    return a*b;
+}
+
+if (digit_nonstring.reduce(getMult) === digit_nonstring.reduce(getSum)) {
+    console.log("You have an Atomic Blonde Number");
+}
+else {
+    console.log("This is not an atomic blone Number");
+}
+
+// Challenge 3
+
+// Pick any four digit number and do the following:
+// Rearrange the string of digits to form the largest and smallest 4-digit numbers possible.
+// Take these two numbers and subtract the smaller number from the larger. 
+// Suppose we choose the number 8082.
+// 8820−0288=8532
+// 8532−2358=6174
+// 7641−1467=6174 
+// It hits 6174 and then stops.
+// Count also how many iterations loops are required to get to this point.
+// Bonus points for recognising what 6174 is.
+
+let number = parseInt(prompt("What is your four digit number"));
+let digits = number.toString().split("");
+let digit_nonstring = digits.map(Number);
+let i = 0
+function sort_lowest (a, b) {
+    return a - b;
+}
+
+function sort_highest (a ,b) {
+    return b - a;
+}
+
+while (new_number !== 6174) {
+    new_number = parseInt(digit_nonstring.sort(sort_highest).join('')) - parseInt(digit_nonstring.sort(sort_lowest).join(''));
+    i ++ ;
+}
+
+console.log(i)
+    </script>
+
+</html>
