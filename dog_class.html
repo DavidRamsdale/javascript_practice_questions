@@ -1,0 +1,134 @@
+<html>
+
+<body>
+    
+    <script>
+
+        class Dog {
+            constructor(name, location){
+                this.name = name;
+                this.location = location;
+                this.total_travelled = 0;
+            }
+
+            speak() {
+                 return `Woof my name is ${this.name}`;
+                }
+
+               
+            walk(location, distance) {
+                console.log(`${this.name} has walked to ${location} with a distance of ${distance}km`);
+                this.total_travelled += distance;
+            }
+
+            total_walk(total_travelled){
+                return total_travelled;
+            }    
+        }
+
+       
+
+        // class Dog extends Walk {
+        //     constructor(name, location){
+        //         this.name = name;
+        //         this.location = location;
+        //         this.total_travelled = 0;
+        //         this.walks = []
+        //     }
+
+        //     speak() {
+        //          return `Woof my name is ${this.name}`;
+        //         }
+
+        //     walk(location,distance) {
+        //         // Walk.walk(location, distance);
+        //     }
+
+        //     total_travelled(total_travelled){
+        //         Walk.total_travelled();
+        //     }
+
+        // }
+
+        // class Walk {
+        //     constructor(distance, location) {
+        //         this.location = location;
+        //         this.distance = distance;
+        //         this.total_travelled = 0;
+        //         this.walks = [];
+        //     }
+
+        //     walk(location, distance) {
+        //         // create new walk object with every walk
+        //         console.log(`${this.name} has walked to ${location} with a distance of ${distance}km`);
+        //         this.total_travelled += distance;
+        //         this.walks.push(location);
+        //     }
+
+        //     total_walk(){
+        //         return this.total_travelled;
+        //     }    
+        // }
+
+        //Javascript objects
+//         function Person(name, age) {
+//             this.name = name;
+//             this.age = age;
+//             this.awesome = true;
+//         }
+
+
+//         function Hero(name, level){
+//             this.name = name;
+//             this.level = level;
+//             this.shout = function (){
+//                 return `My name is ${this.name}`;
+//             }
+//         }
+        
+//         function Villian(name, level) {
+//             this.name = name;
+//             this.level = level;
+//         }
+        
+//         function Human() {
+//             this.legs = 2;
+//             this.arms = 2;
+//             this.head = 1;
+//         }
+
+//         class Rectangle{
+//             constructor(height, width) {
+//                 this.height = height;
+//                 this.width = width;
+//             }
+//             area() {
+//                 return this.height* this.width;
+//             }
+//         }
+
+//         class Square extends Rectangle{
+//             constructor(height, width){
+//                 super(height, width);
+//             }
+//             isSquare(){
+//                 return this.height === this.width;
+//             }
+//         }
+
+
+
+//         class House{
+//             static unlock(secretpassphrase){
+//                 if (secretPassphrase === "please") {
+//                     return "ok";
+//                 } else {
+//                     return "wrong";
+//                 }
+//             }
+//         }
+//     </script>
+
+// </body>
+
+</html>

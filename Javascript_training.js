@@ -31,3 +31,6 @@ for (i = 0; i< me.hobbies.length; i ++) {
 // Adding to the array
 me.hobbies.push("food")
 
+let age = 25
+let allowed = (age >18) ? True : False
+if (age => 18)? True : False

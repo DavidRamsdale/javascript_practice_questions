@@ -111,7 +111,6 @@ else {
 let number = parseInt(prompt("What is your four digit number"));
 let digits = number.toString().split("");
 let digit_nonstring = digits.map(Number);
-let i = 0
 function sort_lowest (a, b) {
     return a - b;
 }
@@ -120,8 +119,9 @@ function sort_highest (a ,b) {
     return b - a;
 }
 
-while (new_number !== 6174) {
-    new_number = parseInt(digit_nonstring.sort(sort_highest).join('')) - parseInt(digit_nonstring.sort(sort_lowest).join(''));
+while (digit_nonstring !== 6174) {
+
+    digit_nonstring = parseInt(digit_nonstring.sort(sort_highest).join('')) - parseInt(digit_nonstring.sort(sort_lowest).join(''));
     i ++ ;
 }
 
