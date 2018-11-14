@@ -9,6 +9,7 @@
                 this.name = name;
                 this.location = location;
                 this.total_travelled = 0;
+                this.walks = [];
             }
 
             speak() {
@@ -19,9 +20,14 @@
             walk(location, distance) {
                 console.log(`${this.name} has walked to ${location} with a distance of ${distance}km`);
                 this.total_travelled += distance;
+                this.walks.push(location);
             }
+            
+            display_walk(){
+                return walks;
+            }   
 
-            total_walk(total_travelled){
+            total_walk(){
                 return total_travelled;
             }    
         }
