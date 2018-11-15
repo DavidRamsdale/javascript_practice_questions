@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Current sydney weather</h1>
+
+    <div>
+        <h2>Date</h2>
+        <script>
+            document.write(parsed_response["query"]["results"]["channel"]["item"]["condition"]["date"]);
+        </script>
+    </div>
+
+    <div>
+        <h2>Tempertaure</h2>
+        <script>
+            document.write(fahrenheitToCelcius(parsed_response["query"]["results"]["channel"]["item"]["condition"]["temp"]));
+        </script>
+    </div>
+
+    <div>
+        <h2>Weather</h2>
+        <script>
+            document.write(parsed_response["query"]["results"]["channel"]["item"]["condition"]["text"]);
+        </script>
+    </div>
+ 
+    
+</body>
+</html>

@@ -4,77 +4,43 @@
     
     <script>
 
-        class Dog {
-            constructor(name, location){
-                this.name = name;
-                this.location = location;
-                this.total_travelled = 0;
-                this.walks = [];
-            }
+    class Walk {
+        constructor(location, distance){
+            this.location = location;
+            this.distance = distance
+        }
+    }
 
-            speak() {
-                 return `Woof my name is ${this.name}`;
-                }
-
-               
-            walk(location, distance) {
-                console.log(`${this.name} has walked to ${location} with a distance of ${distance}km`);
-                this.total_travelled += distance;
-                this.walks.push(location);
-            }
-            
-            display_walk(){
-                return walks;
-            }   
-
-            total_walk(){
-                return total_travelled;
-            }    
+    class Dog {
+        constructor(name, location){
+            this.name = name;
+            this.location = location;
+            this.total_travelled = 0;
+            this.walks = [];
+            this.walk = {}
         }
 
-       
+        speak() {
+            return `Woof my name is ${this.name}`;
+        }
 
-        // class Dog extends Walk {
-        //     constructor(name, location){
-        //         this.name = name;
-        //         this.location = location;
-        //         this.total_travelled = 0;
-        //         this.walks = []
-        //     }
+               
+        walk(location, distance) {
+            // console.log(`${this.name} has walked to ${location} with a distance of ${distance}km`);
+            this.walk = new Walk(location ,distance);
+            this.total_travelled += distance;
+            this.walks.push(location);
+        }
+            
+        display_walk(){
+            return walks;
+        }   
 
-        //     speak() {
-        //          return `Woof my name is ${this.name}`;
-        //         }
+        total_walk(){
+            return total_travelled;
+        }    
+    }
 
-        //     walk(location,distance) {
-        //         // Walk.walk(location, distance);
-        //     }
-
-        //     total_travelled(total_travelled){
-        //         Walk.total_travelled();
-        //     }
-
-        // }
-
-        // class Walk {
-        //     constructor(distance, location) {
-        //         this.location = location;
-        //         this.distance = distance;
-        //         this.total_travelled = 0;
-        //         this.walks = [];
-        //     }
-
-        //     walk(location, distance) {
-        //         // create new walk object with every walk
-        //         console.log(`${this.name} has walked to ${location} with a distance of ${distance}km`);
-        //         this.total_travelled += distance;
-        //         this.walks.push(location);
-        //     }
-
-        //     total_walk(){
-        //         return this.total_travelled;
-        //     }    
-        // }
 
         //Javascript objects
 //         function Person(name, age) {

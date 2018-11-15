@@ -35,7 +35,21 @@
                 this.height = height;
                 this.width = width;
             }
+            area() {
+                return this.height* this.width;
+            }
         }
+
+        class Square extends Rectangle{
+            constructor(height, width){
+                super(height, width);
+            }
+            isSquare(){
+                return this.height === this.width;
+            }
+        }
+
+
 
         class House{
             static unlock(secretpassphrase){
