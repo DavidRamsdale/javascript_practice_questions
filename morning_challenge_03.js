@@ -326,3 +326,20 @@ function addAndThenHalveAtSomePoint(a, b, callback) {
 let calculation = addAndThenHalveAtSomePoint(10, 20, (value) => {
     console.log(value);
 });
+
+
+// Shallow code
+function addAndThenHalveAtSomePoint(a , b , callback){
+    addAtSomePoint(halfAtSomePoint(callback)(a , b))
+}
+
+function addAtSomePoint(callback){
+    answer = a + b;
+    callback(answer)
+}
+
+function halfAtSomePoint(callback){
+
+}
+
+
