@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+    <script src="revision.js"></script>
+</head>
+<body>
+        <button id="button">Click Me!</button>
+    <script>
+        function wait(ms) {
+            let start = Date.now(),
+            now = start;
+            while (now - start < ms) {
+                now = Date.now();
+            }
+        }
+
+        document.getElementById("button").addEventListener("click", () => {
+            wait(5000);
+            alert("Ran!");
+        });
+    </script>
+    
+</body>
+</html>

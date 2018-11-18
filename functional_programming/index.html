@@ -13,7 +13,7 @@
         </script>
     </div>
 
-    <div>
+    <div id="this">
         <h2>Tempertaure</h2>
         <script>
             document.write(fahrenheitToCelcius(parsed_response["query"]["results"]["channel"]["item"]["condition"]["temp"]));
@@ -22,11 +22,14 @@
 
     <div>
         <h2>Weather</h2>
-        <script>
-            document.write(parsed_response["query"]["results"]["channel"]["item"]["condition"]["text"]);
-        </script>
+
     </div>
  
-    
+    <script>
+            let thing = document.getElementById("this")
+            let textnode = document.createTextNode(parsed_response["query"]["results"]["channel"]["item"]["condition"]["text"])
+            thing.appendChild(textnode)
+            // this.write(parsed_response["query"]["results"]["channel"]["item"]["condition"]["text"]);
+    </script>
 </body>
 </html>
