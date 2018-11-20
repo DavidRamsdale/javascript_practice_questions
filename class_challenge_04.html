@@ -6,28 +6,53 @@
 
     <script>
 
-        var obj = {
-            x: 5,
-            y: 20,
-            z: 3,
-            a: "test",
-            b: true,
-            c: 11,
-            d: '11'
-        }
+        // var obj = {
+        //     // x: 5,
+        //     // y: 20,
+        //     // z: 3,
+        //     a: "test",
+        //     b: true,
+        //     c: 11,
+        //     d: '11'
+        // }
 
-        function mult(obj) {
-            number= 1;
-            for (value in obj){
-                if (typeof obj[value] === "number"){
-                    number *= obj[value];
-                }
-            }
-            return number;
-        }
+        // function mult(obj) {
+        //     let number= 0;
+        //     for (let key in obj){
+        //         if (typeof obj[key] === "number"){
+        //             let number = 1;
+        //             // number === (number ? 1 : number);
+        //             number *= obj[key];
+        //         }
+        //     }
+        //     console.log(number);
+        // }
 
-        console.log(mult(obj));
+        // // console.log(mult(obj));
+        // mult(obj);
         
+        /* CHALLENGE 10 - Destructuring and Rest Operator
+
+        Assign values to the a, b, c variables
+        using destructuring and rest operator.
+        */
+            
+        "use strict";
+            
+        let a, b, c;
+            
+        let arr = [1, 2, 3, 4, 5, 6, 7];
+            
+        // Write code here
+            
+        console.log(a);
+        // 1
+            
+        console.log(b);
+        // 2
+            
+        console.log(c);
+        // [3, 4, 5, 6, 7]
     </script>
     
 </body>
