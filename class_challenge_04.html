@@ -6,30 +6,29 @@
 
     <script>
 
-        // var obj = {
-        //     // x: 5,
-        //     // y: 20,
-        //     // z: 3,
-        //     a: "test",
-        //     b: true,
-        //     c: 11,
-        //     d: '11'
-        // }
+        var obj = {
+            // x: 5,
+            y: 20,
+            // z: 3,
+            // a: "test",
+            // b: true,
+            c: 11
+            // d: '11'
+        }
 
-        // function mult(obj) {
-        //     let number= 0;
-        //     for (let key in obj){
-        //         if (typeof obj[key] === "number"){
-        //             let number = 1;
-        //             // number === (number ? 1 : number);
-        //             number *= obj[key];
-        //         }
-        //     }
-        //     console.log(number);
-        // }
+        function mult(obj) {
+            let number= 0;
+            for (let key in obj){
+                if (typeof obj[key] === "number"){
+                    number = (number === 'undefined') ? 1 : number);
+                    number *= obj[key];
+                }
+            }
+            console.log(number);
+        }
 
-        // // console.log(mult(obj));
-        // mult(obj);
+        // console.log(mult(obj));
+        mult(obj);
         
         /* CHALLENGE 10 - Destructuring and Rest Operator
 
@@ -37,22 +36,24 @@
         using destructuring and rest operator.
         */
             
-        "use strict";
+        // "use strict";
             
-        let a, b, c;
+        // let a, b, c;
             
-        let arr = [1, 2, 3, 4, 5, 6, 7];
+        // let arr = [1, 2, 3, 4, 5, 6, 7];
+
+        // [a, b, ...c]= arr;
             
-        // Write code here
+        // // Write code here
             
-        console.log(a);
-        // 1
+        // console.log(a);
+        // // 1
             
-        console.log(b);
-        // 2
+        // console.log(b);
+        // // 2
             
-        console.log(c);
-        // [3, 4, 5, 6, 7]
+        // console.log(c);
+        // // [3, 4, 5, 6, 7]
     </script>
     
 </body>
