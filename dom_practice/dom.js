@@ -42,7 +42,7 @@
 // let input = document.querySelector("input");
 // input.value = "Hello World";
 
-var itemList = document.querySelector("#items");
+// var itemList = document.querySelector("#items");
 
 // parentNodes
 // console.log(itemList.childNodes);
@@ -56,5 +56,40 @@ var itemList = document.querySelector("#items");
 // console.log(itemList.firstElementChild)
 // itemList.firstElementChild.textContent = "Hello1";
 
-console.log(itemList.previousElementSibling)
-itemList.previousElementSibling.style.color = "Green";
+// console.log(itemList.previousElementSibling)
+// itemList.previousElementSibling.style.color = "Green";
+
+//Event listeners
+
+let button = document.getElementById("button").addEventListener("mouseup", runEvent);
+let box = document.getElementById("box")
+
+// box.addEventListener("mouseenter", runEvent);
+// box.addEventListener("mouseleave ", runEvent);
+box.addEventListener("mousemove", runEvent);
+function buttonClick(e){
+    // console.log("upo");
+    // document.getElementById("header-title").textContent = "Changed";
+    // document.querySelector("#main").style.backgroundColor = "blue";
+    // console.log(e);
+
+    // console.log(e.target);
+    // console.log(e.target.id);
+    // console.log(e.target.className);
+    // console.log(e.type);
+
+    // browswer
+    console.log(e.clientX);
+
+    //from the element
+    console.log(e.offsetX);
+}
+
+function runEvent(e){
+    console.log("event type: "+ e.type);
+
+    document.getElementById("output").innerHTML = "<h3>MouseX: "+e.offsetX+" <h3><h3>MouseY: " +e.offsetY+"</h3>";
+
+    box.style.backgroundColor = "rgb("+e.offsetX+", "+e.offsetY+", 40)";
+
+}
